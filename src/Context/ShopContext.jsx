@@ -15,15 +15,22 @@ const defaultCart = () => {
   return cart;
 };
 const ShopContextProvider = (props) => {
-  const [cartItems, setCarItems] = React.useState(defaultCart());
+  const [cartItems, setCartItems] = React.useState(() => {
+    const savedCart = localStorage.getItem('cartItems');
+    return savedCart ? JSON.parse(savedCart) : defaultCart();
+  });
+
+  React.useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (id) => {
-    setCarItems((prev) => ({ ...prev, [id]: prev[id] + 1 }));
+    setCartItems((prev) => ({ ...prev, [id]: prev[id] + 1 }));
     console.log(cartItems);
   };
 
   const deleteFromCart = (id) => {
-    setCarItems((prev) => ({ ...prev, [id]: prev[id] - 1 }));
+    setCartItems((prev) => ({ ...prev, [id]: prev[id] - 1 }));
   };
 
   const getTotalPrice = () => {

@@ -7,7 +7,9 @@ import { ShopContext } from '../../Context/ShopContext';
 // assets
 import Remove from '../../assets/cart_cross_icon.png';
 export default function CartItems() {
-  const { AllProduct, deleteFromCart, cartItems, getTotalPrice } = React.useContext(ShopContext);
+  const { AllProduct, deleteFromCart, cartItems, setCartItems, getTotalPrice } =
+    React.useContext(ShopContext);
+
   return (
     <div className="cart-items">
       <div className="main-format">
