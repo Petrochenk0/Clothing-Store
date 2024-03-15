@@ -11,7 +11,7 @@ Welcome to Clothing-Store, your trendy fashion destination! Built with React, Ja
 
 ## Get Started
 
-1. Visit 
+1. Visit https://chimerical-druid-688825.netlify.app/
 2. Upgrade your wardrobe with the latest trends!
 
 ## Technologies Used
