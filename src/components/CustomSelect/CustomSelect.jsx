@@ -15,5 +15,3 @@ export default function CustomSelect() {
     </div>
   );
 }
-// Таски:
-// 1) При клике менять sortBy на тот который есть в select

@@ -31,31 +31,25 @@ export default function ShopCategory(props) {
     const category = props.category;
     const filteredAndSortedProducts = filterAndSortProducts(category, sortBy);
     setSortedProducts(filteredAndSortedProducts);
-  }, [props.category]);
+  }, [props.category, sortBy]);
+  const handleChange = (event) => {
+    setSortBy(event.target.value);
+  };
   return (
     <div className="shop-category">
       <img className="banner" src={props.banner} alt="" />
       <div className="product-sort">
         <h2>Sort by:</h2>
-        <select id="sort" name="sort">
-          <option onClick={() => setSortBy('price')} value="price">
-            Price
-          </option>
-          <option onClick={() => setSortBy('popularity')} value="popularity">
-            Popularity
-          </option>
-          <option onClick={() => setSortBy('rating')} value="rating">
-            Rating
-          </option>
+        <select id="sort" name="sort" onChange={handleChange}>
+          <option value="price">Price</option>
+          <option value="popularity">Popularity</option>
+          <option value="rating">Rating</option>
         </select>
       </div>
       <div className="category-of-sorted-indexes">
         <p>
           <span>Showing 1 - 12</span> out of 36 products
         </p>
-        <div className="sort-category-icon">
-          Sorted by <img src={Dropdown} alt="" />
-        </div>
       </div>
       <div className="sort-category-products">
         {sortedProducts.map((item, index) => {
