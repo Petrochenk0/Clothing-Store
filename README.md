@@ -18,6 +18,6 @@ Welcome to Clothing-Store, your trendy fashion destination! Built with React, Ja
 
 - React: Interactive user interfaces.
 - JavaScript: Functionalities.
-- CSS: Visual appeal.
+- SCSS: Visual appeal.
 
 Let's elevate your style! 💃🕺🛒
