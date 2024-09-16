@@ -8,7 +8,7 @@ Welcome to Clothing-Store, your trendy fashion destination! Built with React, Ja
 - 🔄 Sort products for easy browsing.
 - 💳 Secure checkout for stress-free payments.
 - 🚚 Fast shipping to your doorstep.
-  
+
 ## Get Started
 
 1. Visit https://clothing-store-eight-pied.vercel.app
